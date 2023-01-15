@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Carousel Template · Bootstrap v5.2</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+
+        
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+  padding-bottom: 3rem;
+  color: #0B2B40;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+    </style>
+  </head>
+  
+  <body>
+    
+    <header>
+      <div class="px-3 py-2 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+              <img src="https://www.zarla.com/images/zarla-construye-fcil-1x1-2400x2400-20220117-q6tcykhy3wdkfc3hkkym.png?crop=1:1,smart&width=250&dpr=2" width="100" height="100"></a>
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li><a href="#" class="nav-link text-secondary"><i class='bx bx-home'></i>Home </a></li>
+              <li><a href="#" class="nav-link text-white"><i class='bx bxs-group'></i>Nosotros</a></li>
+              <li><a href="#" class="nav-link text-white"><i class='bx bx-buildings'></i>Locales</a></li>
+              <li><a href="#" class="nav-link text-white"><i class='bx bx-package'></i>   Productos</a></li>
+              <li><a href="#" class="nav-link text-white"><i class='bx bx-phone-call'></i>Contactar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+            <button type="button" class="btn btn-light text-dark me-2">Login</button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cfherrera.com/images/img/herramientasmanuales.jpg"  alt="img1" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>GRUPO #1</h1>
+            <h1>Taller:</h1>
+            <p> Diseño y Estilos para Front-End</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src=" https://mundoctr.grupo-ekos.com/storage/posts/August2022/qKV799OQT7DvybG5QP3m.jpg"  alt="img1" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>¿Quiénes somos?</h1>
+            <p><a class="btn btn-lg btn-primary" href="#">Nosotros</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.grandespymes.com.ar/wp-content/uploads/2018/06/servicio-al-cliente-830x467.jpg"  alt="img1" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <p><a class="btn btn-lg btn-primary" href="#">Servicio al cliente </a></p>    
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Somos Ferreteros Exclusivos</h2>
+        <p class="lead">En nuestra ferretería podrás encontrar variedad de productos para satisfacer tus necesidades, 
+          en caso de tener alguna duda puedes consultar con nuestros asesores para ayudarte a elegir el producto 
+          que más se adapte a ti.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://crm.aftgrupo.com/documentacion/70/44677.jpg"  alt="img1"  width="500" height="400">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="https://www.acerocomercial.com/web/image/57990/bombas-min.jpeg"  alt="img1" width="140" height="140" >
+        <h2 class="fw-normal">SOLUCIONES DE AGUA </h2>
+        <p> Miles de equipos de bombeo en todos los sectores.</p>
+        <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="https://como-funciona.co/wp-content/uploads/2018/09/imagen1-png.png"  alt="img1" width="140" height="140" >
+        <h2 class="fw-normal">MAQUINARIA Y EQUIPOS</h2>
+        <p>La maquinaria ligera tiene su gran importancia en el mundo de la construcción.</p>
+        <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="https://ferreteriaargal.com/wp-content/gallery/galleria-1/construccion.jpg"  alt="img1" width="140" height="140" >
+        <h2 class="fw-normal">PRODUCTOS FERRETEROS</h2>
+        <p>Artículos ferreteros indispensables en mi ferretería</p>
+        <p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Variedad. Exclusividad. Confianza.</h2>
+        <p class="lead">Consigue nuestras promociones</p>
+        <p class="lead"> No te puedes perder las mejores ofertas en todas nuestras almacenes.</p>
+        <p><a class="btn btn-lg btn-primary" href="#">Encuéntranos </a></p>    
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://continenteferretero.com/img/cms/SEO/2022SEO/Continente%20Ferretero%20Guadalajara.jpg"  alt="img1"  width="500" height="400">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Locales</a></li> 
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Productos</a></li>       
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contactar</a></li>
+      </ul>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-twitter' ></i></a>Twitter</li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-facebook-circle' ></i></a>Facebook</li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-instagram-alt' ></i></a>Instagram</li>
+      </ul>
+    </footer>
+  </div>  
+</main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
