@@ -1,9 +1,9 @@
 export interface ClienteInterface {
   position: number;
-  cedula: string;
-  nombres: string;
-  apellidos: string;
-  direccion: string;
-  edad: number;
+  nombre: string;
+  descripcion: string;
+  categoria: string;
+  estado: string;
+  precio: number;
   modificar: string;
 }

@@ -5,23 +5,23 @@
   <br>
   <form [formGroup]="usuarioNuevo">
     <mat-form-field class="campos-field">
-      <input matInput placeholder="Cedula" formControlName="cedula">
+      <input matInput placeholder="Nombre" formControlName="nombre">
     </mat-form-field>
 
     <mat-form-field class="campos-field">
-      <input matInput placeholder="Nombres" formControlName="nombres">
+      <input matInput placeholder="Descripcion" formControlName="descripcion">
     </mat-form-field>
 
     <mat-form-field class="campos-field">
-      <input matInput placeholder="Apellidos" formControlName="apellidos">
+      <input matInput placeholder="Categoria" formControlName="categoria">
     </mat-form-field>
 
     <mat-form-field class="campos-field">
-      <input matInput placeholder="Direccion" formControlName="direccion">
+      <input matInput placeholder="Estado" formControlName="estado">
     </mat-form-field>
 
     <mat-form-field class="campos-field">
-      <input matInput placeholder="Edad" formControlName="edad">
+      <input matInput placeholder="Precio" formControlName="precio">
     </mat-form-field>
 
     <button mat-raised-button [disabled] = "!usuarioNuevo.valid" (click)="onSubmit()">Aceptar</button>  

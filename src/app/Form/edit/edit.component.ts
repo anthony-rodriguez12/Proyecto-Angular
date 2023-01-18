@@ -17,11 +17,11 @@ export class EditComponent {
   }
 
   usuarioNuevo = new FormGroup({
-    cedula: new FormControl('',Validators.required),
-    nombres: new FormControl('',Validators.required),
-    apellidos: new FormControl('', Validators.required),
-    direccion: new FormControl('', Validators.required),
-    edad: new FormControl('', Validators.required)
+    nombre: new FormControl('',Validators.required),
+    descripcion: new FormControl('',Validators.required),
+    categoria: new FormControl('', Validators.required),
+    estado: new FormControl('', Validators.required),
+    precio: new FormControl('', Validators.required)
   })
   
   onSubmit()
@@ -31,11 +31,11 @@ export class EditComponent {
         types: 'Modificar',
         info: {
           position: this.cookies.get("nposition"),
-          cedula: this.usuarioNuevo.value.cedula,
-          nombres: this.usuarioNuevo.value.nombres,
-          apellidos: this.usuarioNuevo.value.apellidos,
-          direccion: this.usuarioNuevo.value.direccion,
-          edad: this.usuarioNuevo.value.edad
+          nombre: this.usuarioNuevo.value.nombre,
+          descripcion: this.usuarioNuevo.value.descripcion,
+          categoria: this.usuarioNuevo.value.categoria,
+          estado: this.usuarioNuevo.value.estado,
+          precio: this.usuarioNuevo.value.precio
         }
       },
       skipLocationChange: false,

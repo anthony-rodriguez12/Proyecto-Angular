@@ -15,31 +15,41 @@ import { ClienteInterface } from '../../interfaces/cliente-interface';
 
 const data:ClienteInterface[] = [{
     position: 1,
-    cedula: '0151245245',      
-    nombres: 'Andrés Luis',
-    apellidos: 'Carvajal Lozano',
-    direccion: 'Quito, Ecuador',
-    edad: 50,
+    nombre: 'Aceite de motor sintéti',      
+    descripcion: 'Los aceites de motor totalmente sintéticos resisten el cizallamiento bajo cargas pesadas mejor que los aceites convencionales',
+    categoria: 'Aceite',
+    estado: 'Activo',
+    precio: 15.53,
     modificar: 'Editar',
   },
   {
     position: 2,
-    cedula: '0954658913',      
-    nombres: 'Jorge Luis',
-    apellidos: 'Charco Aguirre',
-    direccion: 'Guayaquil, Ecuador',
-    edad: 36,
+    nombre: 'Aceite de motor, convencional',      
+    descripcion: 'Está especialmente formulado para superar los estándares de la industria en materia de desgaste, depósito y protección contra lodos para ayudar a mantener los motores funcionando como nuevos.',
+    categoria: 'Aceite',
+    estado: 'Activo',
+    precio: 20.00,
     modificar: 'Editar',
   },
   {
     position: 3,
-    cedula: '0957962158',      
-    nombres: 'Andrea Lisbeth',
-    apellidos: 'Romero Haro',
-    direccion: 'Guayaquil, Ecuador',
-    edad: 45,
+    nombre: 'Filtro de aire de motor',      
+    descripcion: 'Un filtro de aire limpio mejora la circulación de aire y evita que la suciedad y el polvo entren en el motor.',
+    categoria: 'Motor',
+    estado: 'Activo',
+    precio: 8.00,
+    modificar: 'Editar',
+  },
+  {
+    position: 4,
+    nombre: 'Limpiador de motor Brite Foamy',
+    descripcion: 'Elimina de forma segura la grasa, la suciedad y la mugre de la mayoría de los motores.',
+    categoria: 'Motor',
+    estado: 'Activo',
+    precio: 6.00,
     modificar: 'Editar',
   }
+
 ];
 
 @Component({
@@ -48,7 +58,7 @@ const data:ClienteInterface[] = [{
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-  displayedColumns: string[] = ['position','cedula','nombres', 'apellidos','direccion','edad', 'modificar'];
+  displayedColumns: string[] = ['position','nombre','descripcion', 'categoria','estado','precio', 'modificar'];
   dataToDisplay = [...data];
   
   dataSource = new MatTableDataSource<ClienteInterface>;
@@ -95,11 +105,11 @@ export class AdminComponent {
       if(this.nposition == element.position){
         console.log("Antes:",element)
         console.log('Entre')
-        element.cedula = newData.cedula;     
-        element.nombres = newData.nombres;
-        element.apellidos = newData.apellidos;
-        element.direccion = newData.direccion;
-        element.edad = newData.edad;
+        element.nombre = newData.nombre;     
+        element.descripcion = newData.descripcion;
+        element.categoria = newData.categoria;
+        element.estado = newData.estado;
+        element.precio = newData.precio;
         console.log("Despues:",element)
       }
       console.log("no entro")

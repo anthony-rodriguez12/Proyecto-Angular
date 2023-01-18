@@ -104,6 +104,11 @@ export class NavbarComponent implements OnInit{
     return this.ruta
   }
 
+  APanel(){   
+    this.router.navigate(['/']);
+    this.myRuta();
+  }
+  
   signOut(){
     this.cookies.delete("Data")
     this.router.navigate(['/']);
