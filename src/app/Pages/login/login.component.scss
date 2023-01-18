@@ -1,12 +1,27 @@
-div:first-child{
+div.initial:first-child{
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: 20% 80%;
+  row-gap: 20px;
   height: 100%;
   width: 100%;
-  background-color: #2c3338;
+  background-color: #212529;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+  overflow: hidden;
   
+  div.alerts{ 
+    display: grid;
+    div.bg-danger-subtle{
+      align-self: end;
+      width: 35vw !important;
+      align-self: end; 
+      padding: 4px 7px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
   form{
     margin: 0 4rem;
     p{
@@ -116,3 +131,26 @@ input::-webkit-input-placeholder {
   input:-ms-input-placeholder {  
   color: #cbd2d4 !important;  
   }
+
+/*-------- Validación---------------*/ 
+
+
+.block{
+  display: block;
+}
+.relative{ display: relative;}
+.absolute{ display: absolute; }
+.top-0{ top: 0; }
+.bottom-0{ bottom: 0; }
+.right-0{ right: 0; }
+//.px-4{ padding-left: 1rem; padding-right: 1rem; }
+//.py-3{ padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.h-6{ height: 1.5rem; } 
+.w-6{ width: 1.5rem; }
+.p-0{ padding: 0; }
+@media (max-width: 640px) {
+  .sm-inline{
+    display: inline-block;
+  }
+}
+

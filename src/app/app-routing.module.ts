@@ -6,14 +6,17 @@ import { LocalesComponent } from './Pages/locales/locales.component';
 import { NosotrosComponent } from './Pages/nosotros/nosotros.component';
 import { ProductosComponent } from './Pages/productos/productos.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { AdminComponent } from './Pages/admin/admin.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
+  {path:'home', component:HomeComponent},
   {path:'contactar', component:ContactarComponent},
   {path:'locales', component:LocalesComponent},
   {path:'nosotros', component:NosotrosComponent},
   {path:'productos', component:ProductosComponent},
   {path:'login', component:LoginComponent},
+  {path:'admin', component:AdminComponent}
 ];
 
 @NgModule({

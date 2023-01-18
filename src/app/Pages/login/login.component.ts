@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {NavigationExtras, Router} from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
   ruta = '';
   encrip: any;
   user:any;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cookies:CookieService) { }
 
   alert: boolean = false;
   
@@ -54,14 +55,17 @@ export class LoginComponent {
         this.myRuta()
         
         this.Users.contador = 0
-        //this.encrip = JSON.stringify(user);
-        //this.cookies.set("Data",this.encrip);
+        this.encrip = JSON.stringify(user);
+        this.cookies.set("Data",this.encrip);
       };
       this.Users.contador++; 
     });
     if(this.Users.contador === 4 ) {
       this.alert = true;
-      setTimeout(() => this.alert=false, 4000);
+      setTimeout(() =>{ 
+      this.alert=false
+      this.valid = ''
+    }, 5000);
     }
     
   }
@@ -74,6 +78,4 @@ export class LoginComponent {
     console.log(this.ruta)
     return this.ruta
   }
-
-
 }

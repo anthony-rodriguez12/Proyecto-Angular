@@ -1,0 +1,29 @@
+<header>
+  <div class="px-3 py-2 text-bg-dark">
+    <div class="container">
+      <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a routerLink="" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img src="https://www.zarla.com/images/zarla-construye-fcil-1x1-2400x2400-20220117-q6tcykhy3wdkfc3hkkym.png?crop=1:1,smart&width=250&dpr=2" width="100" height="100"></a>
+        <ul class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
+          <li><a routerLink="" class="nav-link {{this.rutas[0].home}}"><i class='bx bx-home pageActive'></i>Home </a></li>
+          <li><a routerLink="/nosotros" class="nav-link {{this.rutas[0].nosotros}}"><i class='bx bxs-group'></i>Nosotros</a></li>
+          <li><a routerLink="/locales" class="nav-link {{this.rutas[0].locales}}"><i class='bx bx-buildings'></i>Locales</a></li>
+          <li><a routerLink="/productos" class="nav-link {{this.rutas[0].productos}}"><i class='bx bx-package'></i>Productos</a></li>
+          <li><a routerLink="/contactar" class="nav-link {{this.rutas[0].contactar}}"><i class='bx bx-phone-call'></i>Contactar</a></li>
+          <li *ngIf="true" ><a routerLink="/contactar" class="nav-link {{this.rutas[0].contactar}}"><i class='bx bx-phone-call'></i>Contactar</a></li>
+          <li *ngIf="ruta!=='/admin'" ><a routerLink="/login" class="nav-link {{this.rutas[0].login}}"><button type="button" class="btn btn btn-outline-light me-2">Login</button></a></li>
+          <div *ngIf="ruta==='/admin'" ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-dark intento" id="dropdownBasic1" ngbDropdownToggle>
+              <img class="img-cover" src="{{ user.img ? user.img : 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'}}" alt="yo" >
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem (click)="signOut()">Sign out</button>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

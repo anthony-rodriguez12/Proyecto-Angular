@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { MatDialog } from '@angular/material/dialog';
 
 import { DataSource } from '@angular/cdk/collections';
@@ -44,11 +43,11 @@ const data:ClienteInterface[] = [{
 ];
 
 @Component({
-  selector: 'app-productos',
-  templateUrl: './productos.component.html',
-  styleUrls: ['./productos.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class ProductosComponent {
+export class AdminComponent {
   displayedColumns: string[] = ['position','cedula','nombres', 'apellidos','direccion','edad', 'modificar'];
   dataToDisplay = [...data];
   
@@ -64,7 +63,6 @@ export class ProductosComponent {
     
     let counte = this.dataToDisplay.length
     this.cookies.set("total", counte.toString())
-
     this.dataSource = new MatTableDataSource(this.dataToDisplay);
 
     if (this.nuevoCliente != null){      
@@ -155,5 +153,4 @@ class DataSourceFound extends DataSource<ClienteInterface>{
   setData(data: ClienteInterface[]) {
     this._dataStream.next(data);
   }
-
 }

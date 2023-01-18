@@ -1,1 +1,115 @@
-<p>contactar works!</p>
+<!DOCTYPE html>
+<html lang="es">
+  <body>
+    <app-navbar></app-navbar>
+    <div class="container">
+      <div class="row featurette">
+        <div class="col-lg-6">
+          <h1><a>CONTÁCTANOS</a></h1>
+          <br />
+          <div id="centrar">
+            <p>Envíanos tu consulta sobre nuestros productos o servicios.</p>
+            <p><b>GUAYAQUIL:</b></p>
+            <p>(04) 3264 645</p>
+
+            <p><b>QUITO:</b></p>
+            <p>(02) 6987 2649</p>
+
+            <p><b>CUENCA:</b></p>
+            <p>(07) 8751 963</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h2><a>Ubicacion</a></h2>
+          <br />
+
+          <div class="ubication-map" style="width: 90%">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7974.06743373037!2d-79.90529313683511!3d-2.1407601549973703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d0f2e83aa81%3A0x6b3b635c59070bcb!2sFerrisariato%20Alborada!5e0!3m2!1ses!2sec!4v1673989711377!5m2!1ses!2sec"
+              width="600"
+              height="300"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label for="nombre" class="mb-2">Nombres</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="nombre"
+                      id="num"
+                      placeholder="Nombres"
+                      autofocus=""
+                    />
+                  </div>
+
+                  <div class="col-lg-6">
+                    <label for="nombre" class="mb-2">Apellidos</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="apellido"
+                      id="num"
+                      placeholder="Apellidos"
+                      autofocus=""
+                    />
+                  </div>
+
+                  <div class="col-lg-6">
+                    <label for="nombre" class="mb-2">Correo electrónico</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="nombre"
+                      id="num"
+                      placeholder="Email"
+                      autofocus=""
+                    />
+                  </div>
+
+                  <div class="col-lg-6">
+                    <label for="ciudad" class="mb-2">Ciudad</label>
+                    <select name="city" class="form-select">
+                      <option value="Seleccione">-Seleccione-</option>
+                      <option value="Guayaquil">Guayaquil</option>
+                      <option value="Quito">Quito</option>
+                      <option value="Cuenca">Cuenca</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <label for="mensaje" class="mb-2">Mensaje</label>
+                    <textarea
+                      name="message"
+                      cols="40"
+                      rows="5"
+                      class="form-control"
+                      placeholder="Ingrese texto Aqui"
+                      autofocus=""
+                    >
+                    </textarea>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button type="reset" class="btn btn-primary">Enviar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,22 +1,5 @@
 
-<header>
-  <div class="px-3 py-2 text-bg-dark">
-    <div class="container">
-      <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a routerLink="" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-          <img src="https://www.zarla.com/images/zarla-construye-fcil-1x1-2400x2400-20220117-q6tcykhy3wdkfc3hkkym.png?crop=1:1,smart&width=250&dpr=2" width="100" height="100"></a>
-        <ul class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
-          <li><a routerLink="" class="nav-link text-secondary"><i class='bx bx-home pageActive'></i>Home </a></li>
-          <li><a routerLink="/nosotros" class="nav-link text-white"><i class='bx bxs-group'></i>Nosotros</a></li>
-          <li><a routerLink="/locales" class="nav-link text-white"><i class='bx bx-buildings'></i>Locales</a></li>
-          <li><a routerLink="/productos" class="nav-link text-white"><i class='bx bx-package'></i>Productos</a></li>
-          <li><a routerLink="/contactar" class="nav-link text-white"><i class='bx bx-phone-call'></i>Contactar</a></li>
-          <li><a routerLink="/login" class="nav-link text-white"><button type="button" class="btn btn btn-outline-light me-2">Login</button></a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+<app-navbar></app-navbar>
 <!---------------------------------------------------------------------------------->
 <main>
 <ngb-carousel
@@ -98,14 +81,14 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
+      <div class="col-md-6 order-md-2">
         <h2 class="featurette-heading fw-normal lh-1">Variedad. Exclusividad. Confianza.</h2>
         <p class="lead">Consigue nuestras promociones</p>
         <p class="lead"> No te puedes perder las mejores ofertas en todas nuestras almacenes.</p>
         <p><a class="btn btn-lg btn-primary" href="#">Encuéntranos </a></p>    
       </div>
-      <div class="col-md-5 order-md-1 img-fluid">
-        <img src="https://continenteferretero.com/img/cms/SEO/2022SEO/Continente%20Ferretero%20Guadalajara.jpg"  alt="img1" >
+      <div class="col-md-6 order-md-1 ">
+        <img class="img-fluid" src="https://continenteferretero.com/img/cms/SEO/2022SEO/Continente%20Ferretero%20Guadalajara.jpg"  alt="img1" >
       </div>
     </div>
 
@@ -118,25 +101,7 @@
 
   <!-- FOOTER -->
   <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Locales</a></li> 
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Productos</a></li>       
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contactar</a></li>
-      </ul>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-twitter' ></i></a>Twitter</li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-facebook-circle' ></i></a>Facebook</li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-instagram-alt' ></i></a>Instagram</li>
-      </ul>
-    </footer>
+    <app-footer></app-footer>
   </div>  
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

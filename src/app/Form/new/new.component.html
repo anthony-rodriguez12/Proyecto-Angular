@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+
+      <form (ngSumit)="SaveData(formTemplate)" #formTemplate="ngForm">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <label for="nombre" class="mb-2">Numero</label>
+            <input type="text" class="form-control" name="nombre" id="num" placeholder="Nombre producto" autofocus="" />
+          </div>
+
+          <div class="col-lg-6">
+            <label for="nombre" class="mb-2">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" ngplaceholder="Nombre producto" autofocus="" />
+          </div>
+
+          <div class="col-lg-6">
+            <label for="categoria" class="mb-2">Categoria</label>
+            <input type="text" class="form-control" name="nombre" id="categoria" placeholder="Nombre de Categoria" autofocus="" />
+
+          </div>
+
+          <div class="col-lg-12">
+            <label for="descripcion" class="mb-2  mt-3">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion producto" autofocus="" />
+          </div>
+
+          <div class="col-lg-6">
+            <label for="precio" class="mb-2  mt-3">Precio</label>
+            <input type="text" class="form-control" name="precio" id="precio"  autofocus="" />
+          </div>
+
+          
+
+          <div class="text-center mt-3">
+            <button  type="submit"  class="btn btn-primary"  >Guardar</button>
+            <a routerLink="/producto" class="btn btn-primary">Cancelar</a>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

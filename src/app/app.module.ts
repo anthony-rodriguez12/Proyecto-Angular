@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './Pages/home/home.component';
 import { NosotrosComponent } from './Pages/nosotros/nosotros.component';
@@ -14,15 +15,20 @@ import { ProductosComponent } from './Pages/productos/productos.component';
 import { ContactarComponent } from './Pages/contactar/contactar.component';
 import { LoginComponent } from './Pages/login/login.component';
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input'
-import {MatCardModule} from '@angular/material/card'
-import {MatToolbarModule} from '@angular/material/toolbar'
-import {MatIconModule} from '@angular/material/icon';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatTableModule} from '@angular/material/table';
-
+import { MatInputModule} from '@angular/material/input'
+import { MatCardModule} from '@angular/material/card'
+import { MatToolbarModule} from '@angular/material/toolbar'
+import { MatIconModule} from '@angular/material/icon';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatTableModule} from '@angular/material/table';
+import { EditComponent } from './Form/edit/edit.component';
+import { NewComponent } from './Form/new/new.component';
+import { NavbarComponent } from './Shared/navbar/navbar.component';
+import { FooterComponent } from './Shared/footer/footer.component';
+import { AdminComponent } from './Pages/admin/admin.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,15 +39,20 @@ import {MatTableModule} from '@angular/material/table';
     ProductosComponent,
     ContactarComponent,
     LoginComponent,
+    EditComponent,
+    NewComponent,
+    NavbarComponent,
+    FooterComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule,
-    NgbCarouselModule,
-    MatButtonModule, ReactiveFormsModule, MatInputModule, 
-    MatCardModule, MatToolbarModule, MatIconModule, MatDialogModule, MatTableModule
+    NgbModule, NgbCarouselModule, MatButtonModule,
+    ReactiveFormsModule, MatInputModule, 
+    MatCardModule, MatToolbarModule, MatIconModule, 
+    MatDialogModule, MatTableModule,FormsModule,NgbDropdownModule
   ],
   entryComponents: [LoginComponent],
   providers: [NgbCarouselConfig],
