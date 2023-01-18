@@ -1,47 +1,104 @@
-<div class="container">
-  <div class="card">
-    <div class="card-body">
-
-      <form (ngSumit)="SaveData(formTemplate)" #formTemplate="ngForm">
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <label for="nombre" class="mb-2">Numero</label>
-            <input type="text" class="form-control" name="nombre" id="num" placeholder="Nombre producto" autofocus="" />
-          </div>
-
-          <div class="col-lg-6">
-            <label for="nombre" class="mb-2">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" ngplaceholder="Nombre producto" autofocus="" />
-          </div>
-
-          <div class="col-lg-6">
-            <label for="categoria" class="mb-2">Categoria</label>
-            <input type="text" class="form-control" name="nombre" id="categoria" placeholder="Nombre de Categoria" autofocus="" />
-
-          </div>
-
-          <div class="col-lg-12">
-            <label for="descripcion" class="mb-2  mt-3">Descripcion</label>
-            <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion producto" autofocus="" />
-          </div>
-
-          <div class="col-lg-6">
-            <label for="precio" class="mb-2  mt-3">Precio</label>
-            <input type="text" class="form-control" name="precio" id="precio"  autofocus="" />
-          </div>
-
-          
-
-          <div class="text-center mt-3">
-            <button  type="submit"  class="btn btn-primary"  >Guardar</button>
-            <a routerLink="/producto" class="btn btn-primary">Cancelar</a>
-          </div>
-
-        </div>
-      </form>
-    </div>
+<!-->
+<mat-card class="my-10">
+  <div style="text-align:center;">
+    <mat-card-title>Nuevo Producto</mat-card-title>
   </div>
-</div>
+  <br>
+  <form [formGroup]="usuarioNuevo">
+    <div class="row">
+      
 
+      
+
+      <div class="text-center mt-3">
+        <button
+          mat-raised-button
+          [disabled]="!usuarioNuevo.valid"
+          type="submit"
+          class="btn btn-primary"
+          (click)="onSubmit()"
+        >
+          Guardar
+        </button>
+        <button mat-raised-button color="btn btn-danger" (click)="cancelar()">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </form>  
+</mat-card>*/
+<!-->
+
+<mat-card class="my-4 container"> 
+  <div style="text-align:center;">
+    <mat-card-title>Nuevo Producto</mat-card-title>
+  </div>   
+  
+  <form [formGroup]="usuarioNuevo">
+    <div class="row ">
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Position</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="position"
+          placeholder="Nombre producto"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Nombre</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="nombre"
+          placeholder="Nombre producto"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="row ">
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Categoria</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="categoria"
+          placeholder="Nombre de Categoria"            
+        />
+      </mat-form-field>
+
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2 mt-3">Estado</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="estado"
+          placeholder="Active/Inactive"
+        />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="campos-field col-md-12">
+      <mat-label class="mb-2 mt-3 bg-transparent text-body">Descripcion</mat-label>
+      <textarea matInput
+      class="form-control"
+      formControlName="descripcion"
+      placeholder="Descripcion producto">
+      </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="campos-field col-md-4">
+      <mat-label class="mb-2 mt-3">Precio</mat-label>
+      <input
+        matInput
+        class="form-control"
+        formControlName="precio"
+        placeholder="$10"
+      />
+    </mat-form-field>
+
+    <button [disabled]="!usuarioNuevo.valid" type="button" class="btn btn-outline-success" (click)="onSubmit()">Guardar</button>
+    <button type="button" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+  </form>
+</mat-card>

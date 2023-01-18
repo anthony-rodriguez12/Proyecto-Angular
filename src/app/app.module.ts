@@ -29,6 +29,7 @@ import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -46,16 +47,14 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     AdminComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserModule, AppRoutingModule, BrowserAnimationsModule,
     NgbModule, NgbCarouselModule, MatButtonModule,
-    ReactiveFormsModule, MatInputModule, 
+    ReactiveFormsModule, MatInputModule,
     MatCardModule, MatToolbarModule, MatIconModule, 
     MatDialogModule, MatTableModule,FormsModule,NgbDropdownModule
   ],
   entryComponents: [LoginComponent],
-  providers: [NgbCarouselConfig],
+  providers: [NgbCarouselConfig, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

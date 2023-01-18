@@ -51,7 +51,7 @@ export class LoginComponent {
     this.valid = 'was-validated'
     this.admins.some((user) => {
       if(user.usuario === usuario && user.password === password){
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/admin']);
         this.myRuta()
         
         this.Users.contador = 0

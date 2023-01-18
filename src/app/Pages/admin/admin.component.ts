@@ -128,13 +128,13 @@ export class AdminComponent {
     this.nposition = element.position;
     this.cookies.set("nposition", this.nposition)
     this.dialog.open(EditComponent, {
-      width: '50%',
+      width: '70%',
     })
   }
 
   openDialogAgregar(){
     this.dialog.open(NewComponent, {
-      width: '50%',
+      width: '70%',
     })
   }
 
