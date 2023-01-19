@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
 import { ContactarComponent } from './Pages/contactar/contactar.component';
-import { LocalesComponent } from './Pages/locales/locales.component';
 import { NosotrosComponent } from './Pages/nosotros/nosotros.component';
 import { ProductosComponent } from './Pages/productos/productos.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { NewComponent } from './Form/new/new.component';
 import { ServiciosComponent } from './Pages/servicios/servicios.component';
-
 
 
 const routes: Routes = [

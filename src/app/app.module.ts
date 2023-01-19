@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './Pages/home/home.component';
 import { NosotrosComponent } from './Pages/nosotros/nosotros.component';
-import { LocalesComponent } from './Pages/locales/locales.component';
 import { ProductosComponent } from './Pages/productos/productos.component';
 import { ContactarComponent } from './Pages/contactar/contactar.component';
 import { LoginComponent } from './Pages/login/login.component';
@@ -37,7 +36,6 @@ import { ServiciosComponent } from './Pages/servicios/servicios.component';
     AppComponent,
     HomeComponent,
     NosotrosComponent,
-    LocalesComponent,
     ProductosComponent,
     ContactarComponent,
     LoginComponent,
