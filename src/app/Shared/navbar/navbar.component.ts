@@ -133,7 +133,7 @@ stringToBoolean(str:string){
   }
 
   APanel(){   
-    this.router.navigate(['/']);
+    this.router.navigate(['/admin']);
     this.myRuta();
   }
   

@@ -13,7 +13,7 @@ import { NewComponent } from 'src/app/Form/new/new.component';
 import { EditComponent } from 'src/app/Form/edit/edit.component';
 import { ClienteInterface } from '../../interfaces/cliente-interface';
 
-const data:ClienteInterface[] = [{
+export const data:ClienteInterface[] = [{
     position: 1,
     img:"https://useast2prodbrandsites.blob.core.windows.net/lth-sfassets-prod/images/default-source/products/product-brands/lubricantes/44max5201.png?sfvrsn=20054f2_2",
     nombre:"Aceite de motor sintético" ,
@@ -81,6 +81,7 @@ const data:ClienteInterface[] = [{
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
+
 export class AdminComponent {
   displayedColumns: string[] = ['position','nombre','descripcion','img', 'categoria','estado','precio', 'modificar'];
   dataToDisplay = [...data];
@@ -109,7 +110,6 @@ export class AdminComponent {
       }
       console.log(this.nuevoCliente.datosCliente.queryParams);
     }
-
   };
 
   addData() {

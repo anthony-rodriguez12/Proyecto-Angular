@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <header>
   <div class="px-3 py-2 text-bg-dark">
     <div class="container">
@@ -5,11 +8,11 @@
         <a routerLink="" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
           <img src="https://www.zarla.com/images/zarla-construye-fcil-1x1-2400x2400-20220117-q6tcykhy3wdkfc3hkkym.png?crop=1:1,smart&width=250&dpr=2" width="100" height="100"></a>
         <ul class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
-          <li><a routerLink="" class="nav-link {{this.rutas[0].home}}"><i class='bx bx-home pageActive'></i>Home </a></li>
-          <li><a routerLink="/nosotros" class="nav-link {{this.rutas[0].nosotros}}"><i class='bx bxs-group'></i>Nosotros</a></li>
-          <li><a routerLink="/servicios" class="nav-link {{this.rutas[0].servicios}}"><i class='bx bx-buildings'></i>Servicios</a></li>
-          <li><a routerLink="/productos" class="nav-link {{this.rutas[0].productos}}"><i class='bx bx-package'></i>Productos</a></li>
-          <li><a routerLink="/contactar" class="nav-link {{this.rutas[0].contactar}}"><i class='bx bx-phone-call'></i>Contactar</a></li>
+          <li><a routerLink="" class="nav-link {{this.rutas[0].home}}"><i class="fa-solid fa-house"></i> Home </a></li>
+          <li><a routerLink="/nosotros" class="nav-link {{this.rutas[0].nosotros}}"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+          <li><a routerLink="/servicios" class="nav-link {{this.rutas[0].servicios}}"><i class="fa-solid fa-screwdriver-wrench"></i> Servicios</a></li>
+          <li><a routerLink="/productos" class="nav-link {{this.rutas[0].productos}}"><i class="fa-solid fa-boxes-stacked"></i> Productos</a></li>
+          <li><a routerLink="/contactar" class="nav-link {{this.rutas[0].contactar}}"><i class="fa-solid fa-phone-volume"></i> Contactar</a></li>
           <li *ngIf="logied ? false:true " ><a routerLink="/login" class="nav-link {{this.rutas[0].login}}"><button type="button" class="btn btn btn-outline-light me-2" (click)="logging()">Login</button></a></li>
           <div *ngIf="!user.img ? user.img : 'false'" ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-outline-dark intento" id="dropdownBasic1" ngbDropdownToggle>

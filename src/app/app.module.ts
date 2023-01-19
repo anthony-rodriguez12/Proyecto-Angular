@@ -18,7 +18,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule} from '@angular/material/input'
 import { MatCardModule} from '@angular/material/card'
-import { MatToolbarModule} from '@angular/material/toolbar'
+
 import { MatIconModule} from '@angular/material/icon';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatTableModule} from '@angular/material/table';
@@ -50,7 +50,7 @@ import { ServiciosComponent } from './Pages/servicios/servicios.component';
     BrowserModule, AppRoutingModule, BrowserAnimationsModule,
     NgbModule, NgbCarouselModule, MatButtonModule,
     ReactiveFormsModule, MatInputModule,
-    MatCardModule, MatToolbarModule, MatIconModule, 
+    MatCardModule, MatIconModule, 
     MatDialogModule, MatTableModule,FormsModule,NgbDropdownModule,
     NgbCollapseModule
   ],

@@ -2,7 +2,7 @@
 <!-- Header -->
 
     <main>
-      <div class="py-5 text-center container">
+      <div class="py-5 text-center container empieza">
         <div class="col-lg-6,6">
           <h1>PRODUCTOS</h1>
         </div>
@@ -11,7 +11,7 @@
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <!--------------------------------------------------------->            
-            <div *ngFor="let product of arreglos; index as i; first as isFirst" class="col">
+            <div *ngFor="let product of impData; index as i; first as isFirst" class="col">
               <div class="card shadow-sm max-h-c">
                 <h2 id="elementos">
                   {{ arreglos[i].nombre }} <br />/ {{ arreglos[i].categoria }}
@@ -47,5 +47,8 @@
         </div>
       </div>
     </main>
+    <div class="container">
+      <app-footer></app-footer>
+    </div>
 
 

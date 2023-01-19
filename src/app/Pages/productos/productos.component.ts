@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { data } from '../admin/admin.component';
+
+
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.scss']
 })
 export class ProductosComponent {
+  impData:any;
+  constructor(){
+    this.impData = [...data]
+  }
+
   public isCollapsed = [
     {be: true},
     {be: true},
@@ -70,5 +78,6 @@ export class ProductosComponent {
     precio:119.20
   }
   ]
-
+  
+  
 }
