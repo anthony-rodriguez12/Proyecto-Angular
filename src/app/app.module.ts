@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
@@ -30,6 +30,7 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { CookieService } from 'ngx-cookie-service';
+import { ServiciosComponent } from './Pages/servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +46,15 @@ import { CookieService } from 'ngx-cookie-service';
     NavbarComponent,
     FooterComponent,
     AdminComponent,
+    ServiciosComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, BrowserAnimationsModule,
     NgbModule, NgbCarouselModule, MatButtonModule,
     ReactiveFormsModule, MatInputModule,
     MatCardModule, MatToolbarModule, MatIconModule, 
-    MatDialogModule, MatTableModule,FormsModule,NgbDropdownModule
+    MatDialogModule, MatTableModule,FormsModule,NgbDropdownModule,
+    NgbCollapseModule
   ],
   entryComponents: [LoginComponent],
   providers: [NgbCarouselConfig, CookieService],

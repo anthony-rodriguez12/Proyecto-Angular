@@ -71,6 +71,7 @@ export class LoginComponent {
   }
   cancelar(){
     this.router.navigate(['/']);
+    this.cookies.set("loging",JSON.stringify('false'))
   }
 
   myRuta(){

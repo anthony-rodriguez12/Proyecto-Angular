@@ -1,2 +1,51 @@
 <app-navbar></app-navbar>
 <!-- Header -->
+
+    <main>
+      <div class="py-5 text-center container">
+        <div class="col-lg-6,6">
+          <h1>PRODUCTOS</h1>
+        </div>
+      </div>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <!--------------------------------------------------------->            
+            <div *ngFor="let product of arreglos; index as i; first as isFirst" class="col">
+              <div class="card shadow-sm max-h-c">
+                <h2 id="elementos">
+                  {{ arreglos[i].nombre }} <br />/ {{ arreglos[i].categoria }}
+                </h2>
+                <br />
+                <div id="img" class="theHeight">
+                  <img src="{{arreglos[i].img}}" class="maxh"/>
+                </div>
+
+                <div class="card-body">
+                  <div id="elementos">
+                    <h4>
+                      <a>Precio: $ {{ arreglos[i].precio }} </a>
+                    </h4>
+
+                    <h5><a type="button"
+                      class="btn btn-outline-primary"
+                      (click)="collapse.toggle()"
+                      [attr.aria-expanded]="!isCollapsed[i].be"
+                      aria-controls="collapseExample">Descripcion</a></h5>
+                    <div id="justi" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed[i].be" >
+                      <div class="card">
+                        <div class="card-body"> {{ arreglos[i].descripcion }} </div>
+                      </div>
+                    </div>
+                    <br />
+                    <h4 class="{{arreglos[i].estado === 'Disponible' ? 'colord':'colora'}}">-- {{ arreglos[i].estado }} --</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+

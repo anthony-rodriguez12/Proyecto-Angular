@@ -10,6 +10,8 @@ import { CookieService } from 'ngx-cookie-service';
 })
 
 export class NavbarComponent implements OnInit{
+  logied: boolean = false;
+  logie:string = '';
   ruta = '';
   user: any;
   constructor(private router: Router,  private cookies:CookieService) {
@@ -21,17 +23,43 @@ export class NavbarComponent implements OnInit{
         usuario:'Perfil',
       }
     }
+    try {
+      this.logie = this.cookies.get("loging");
+      this.logie = JSON.parse(this.logie);
+      this.logied = this.stringToBoolean(this.logie)
+      console.log(this.logied)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   rutas = [
     {home:'sd'},
     {contactar:''},
-    {locales:''},
+    {servicios:''},
     {nosotros:''},
     {productos:''},
     {login:''}
   ]
   
+
+stringToBoolean(str:string){
+    switch (str.toLowerCase())
+    {
+      case "true":
+      case "yes":
+      case "1":
+        return true;
+
+      case "false":
+      case "no":
+      case "0":
+        return false;
+
+      default:
+        return false;
+    }
+  }
 
   nav(){
     let x:string = this.router.url
@@ -40,7 +68,7 @@ export class NavbarComponent implements OnInit{
       case "/home":
           this.rutas[0].home = 'text-secondary';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-white'
@@ -50,15 +78,15 @@ export class NavbarComponent implements OnInit{
       case "/contactar":
           this.rutas[0].home = 'text-white';
           this.rutas[0].contactar = 'text-secondary'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-white'
         break;
-      case "/locales":
+      case "/servicios":
           this.rutas[0].home = 'text-white';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-secondary'
+          this.rutas[0].servicios = 'text-secondary'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-white'
@@ -66,7 +94,7 @@ export class NavbarComponent implements OnInit{
       case "/nosotros":
           this.rutas[0].home = 'text-white';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-secondary'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-white'
@@ -74,7 +102,7 @@ export class NavbarComponent implements OnInit{
       case "/productos":
           this.rutas[0].home = 'text-white';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-secondary'
           this.rutas[0].login = 'text-white'
@@ -82,7 +110,7 @@ export class NavbarComponent implements OnInit{
       case "/login":
           this.rutas[0].home = 'text-white';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-secondary'
@@ -90,7 +118,7 @@ export class NavbarComponent implements OnInit{
       default:
           this.rutas[0].home = 'text-secondary';
           this.rutas[0].contactar = 'text-white'
-          this.rutas[0].locales = 'text-white'
+          this.rutas[0].servicios = 'text-white'
           this.rutas[0].nosotros = 'text-white'
           this.rutas[0].productos = 'text-white'
           this.rutas[0].login = 'text-white'
@@ -110,9 +138,16 @@ export class NavbarComponent implements OnInit{
   }
   
   signOut(){
-    this.cookies.delete("Data")
+    this.user = this.cookies.delete("Data")
+    this.cookies.set("loging",JSON.stringify('false'))
+    this.logied = true;
     this.router.navigate(['/']);
     this.myRuta();
+  }
+
+  logging(){
+    this.cookies.set("loging",JSON.stringify('true'))
+    
   }
 
   ngOnInit(){

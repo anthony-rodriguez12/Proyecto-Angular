@@ -1,33 +1,3 @@
-<!-->
-<mat-card class="my-10">
-  <div style="text-align:center;">
-    <mat-card-title>Nuevo Producto</mat-card-title>
-  </div>
-  <br>
-  <form [formGroup]="usuarioNuevo">
-    <div class="row">
-      
-
-      
-
-      <div class="text-center mt-3">
-        <button
-          mat-raised-button
-          [disabled]="!usuarioNuevo.valid"
-          type="submit"
-          class="btn btn-primary"
-          (click)="onSubmit()"
-        >
-          Guardar
-        </button>
-        <button mat-raised-button color="btn btn-danger" (click)="cancelar()">
-          Cancelar
-        </button>
-      </div>
-    </div>
-  </form>  
-</mat-card>*/
-<!-->
 
 <mat-card class="my-4 container"> 
   <div style="text-align:center;">
@@ -42,7 +12,7 @@
           matInput
           class="form-control"
           formControlName="position"
-          placeholder="Nombre producto"
+          placeholder="N° 1..."
         />
       </mat-form-field>
 
@@ -85,6 +55,15 @@
       class="form-control"
       formControlName="descripcion"
       placeholder="Descripcion producto">
+      </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="campos-field col-md-12">
+      <mat-label class="mb-2 mt-3 bg-transparent text-body">Url Imagen</mat-label>
+      <textarea matInput
+      class="form-control"
+      formControlName="img"
+      placeholder="www.imagen.com/12354.png">
       </textarea>
     </mat-form-field>
 

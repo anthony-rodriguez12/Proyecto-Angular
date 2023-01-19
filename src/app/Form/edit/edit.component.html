@@ -1,31 +1,83 @@
-<mat-card class="my-10"> 
+<mat-card class="my-4"> 
   <div style="text-align:center;">
-    <mat-card-title>Modificar Cliente</mat-card-title>
+    <mat-card-title>Modificar Producto</mat-card-title>
   </div>   
   <br>
   <form [formGroup]="usuarioNuevo">
-    <mat-form-field class="campos-field">
-      <input matInput placeholder="Nombre" formControlName="nombre">
+    <div class="row ">
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Position</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="position"
+          placeholder="N° 1..."
+        />
+      </mat-form-field>
+
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Nombre</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="nombre"
+          placeholder="Nombre producto"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="row ">
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2">Categoria</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="categoria"
+          placeholder="Nombre de Categoria"            
+        />
+      </mat-form-field>
+
+      <mat-form-field class="campos-field col-md-6">
+        <mat-label class="mb-2 mt-3">Estado</mat-label>
+        <input
+          matInput
+          class="form-control"
+          formControlName="estado"
+          placeholder="Active/Inactive"
+        />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="campos-field col-md-12">
+      <mat-label class="mb-2 mt-3 bg-transparent text-body">Descripcion</mat-label>
+      <textarea matInput
+      class="form-control"
+      formControlName="descripcion"
+      placeholder="Descripcion producto">
+      </textarea>
     </mat-form-field>
 
-    <mat-form-field class="campos-field">
-      <input matInput placeholder="Descripcion" formControlName="descripcion">
+    <mat-form-field class="campos-field col-md-12">
+      <mat-label class="mb-2 mt-3 bg-transparent text-body">Url Imagen</mat-label>
+      <textarea matInput
+      class="form-control"
+      formControlName="img"
+      placeholder="www.imagen.com/12354.png">
+      </textarea>
     </mat-form-field>
 
-    <mat-form-field class="campos-field">
-      <input matInput placeholder="Categoria" formControlName="categoria">
+    <mat-form-field class="campos-field col-md-4">
+      <mat-label class="mb-2 mt-3">Precio</mat-label>
+      <input
+        matInput
+        class="form-control"
+        formControlName="precio"
+        placeholder="$10"
+      />
     </mat-form-field>
 
-    <mat-form-field class="campos-field">
-      <input matInput placeholder="Estado" formControlName="estado">
-    </mat-form-field>
-
-    <mat-form-field class="campos-field">
-      <input matInput placeholder="Precio" formControlName="precio">
-    </mat-form-field>
-
-    <button mat-raised-button [disabled] = "!usuarioNuevo.valid" (click)="onSubmit()">Aceptar</button>  
-    <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>      
+    <button [disabled]="!usuarioNuevo.valid" type="button" class="btn btn-outline-success" (click)="onSubmit()">Guardar</button>
+    <button type="button" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
   </form>
 
 </mat-card>

@@ -8,12 +8,15 @@ import { ProductosComponent } from './Pages/productos/productos.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { NewComponent } from './Form/new/new.component';
+import { ServiciosComponent } from './Pages/servicios/servicios.component';
+
+
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'contactar', component:ContactarComponent},
-  {path:'locales', component:LocalesComponent},
+  {path:'servicios', component:ServiciosComponent},
   {path:'nosotros', component:NosotrosComponent},
   {path:'productos', component:ProductosComponent},
   {path:'login', component:LoginComponent},

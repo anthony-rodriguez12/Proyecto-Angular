@@ -23,6 +23,7 @@ export class NewComponent implements OnInit{
     nombre: new FormControl('',Validators.required),
     categoria: new FormControl('', Validators.required),
     descripcion: new FormControl('', Validators.required),
+    img: new FormControl('', Validators.required),
     precio: new FormControl('', Validators.required),
     estado: new FormControl('', Validators.required),
   })
@@ -36,6 +37,7 @@ export class NewComponent implements OnInit{
             position: ++this.total,
             nombre: this.usuarioNuevo.value.nombre,
             descripcion: this.usuarioNuevo.value.descripcion,
+            img: this.usuarioNuevo.value.img,
             categoria: this.usuarioNuevo.value.categoria,
             precio: this.usuarioNuevo.value.precio,
             estado: this.usuarioNuevo.value.estado,

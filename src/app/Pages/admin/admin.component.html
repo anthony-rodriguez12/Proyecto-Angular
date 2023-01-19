@@ -27,6 +27,11 @@
       <td mat-cell *matCellDef="let element" class="w-fit"> {{element.descripcion}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="img" class="w-25">
+      <th mat-header-cell *matHeaderCellDef> Imagen </th>
+      <td mat-cell *matCellDef="let element" class="w-20"> {{element.img}} </td>
+    </ng-container>
+
     <ng-container matColumnDef="categoria">
       <th mat-header-cell *matHeaderCellDef> Categoria </th>
       <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>

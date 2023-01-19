@@ -18,6 +18,7 @@ export class EditComponent {
 
   usuarioNuevo = new FormGroup({
     nombre: new FormControl('',Validators.required),
+    img: new FormControl('',Validators.required),
     descripcion: new FormControl('',Validators.required),
     categoria: new FormControl('', Validators.required),
     estado: new FormControl('', Validators.required),
@@ -33,6 +34,7 @@ export class EditComponent {
           position: this.cookies.get("nposition"),
           nombre: this.usuarioNuevo.value.nombre,
           descripcion: this.usuarioNuevo.value.descripcion,
+          img: this.usuarioNuevo.value.img,
           categoria: this.usuarioNuevo.value.categoria,
           estado: this.usuarioNuevo.value.estado,
           precio: this.usuarioNuevo.value.precio
@@ -43,7 +45,7 @@ export class EditComponent {
     };
 
     this.dialogRef.close(); 
-    this.redirectTo('/cliente', objToSend);
+    this.redirectTo('/admin', objToSend);
 
   }
 
