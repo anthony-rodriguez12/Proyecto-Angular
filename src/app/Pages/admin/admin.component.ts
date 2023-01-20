@@ -144,8 +144,9 @@ export class AdminComponent {
     this.dataSource.data = this.dataToDisplay;
   }
 
-  removeData() {
-    this.dataToDisplay = this.dataToDisplay.slice(0, -1);
+  removeData(position:any) {
+    console.log(position)
+    this.dataToDisplay = this.dataToDisplay.filter((item) => item.position !== position)
     this.dataSource.data = this.dataToDisplay;
   }
 

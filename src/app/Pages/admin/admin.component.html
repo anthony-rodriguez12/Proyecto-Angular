@@ -51,6 +51,7 @@
       <th mat-header-cell *matHeaderCellDef> Action </th>
       <td mat-cell *matCellDef="let element">
         <button mat-raised-button color="accent" (click)="openDialogEditRow(element)">Modificar</button>
+        <button mat-raised-button color="accent" (click)="removeData(element.position)">Eliminar</button>
       </td>
     </ng-container>
     
