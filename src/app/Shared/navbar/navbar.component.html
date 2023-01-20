@@ -13,7 +13,7 @@ integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcn
           <li><a routerLink="/servicios" class="nav-link {{this.rutas[0].servicios}}"><i class="fa-solid fa-screwdriver-wrench"></i> Servicios</a></li>
           <li><a routerLink="/productos" class="nav-link {{this.rutas[0].productos}}"><i class="fa-solid fa-boxes-stacked"></i> Productos</a></li>
           <li><a routerLink="/contactar" class="nav-link {{this.rutas[0].contactar}}"><i class="fa-solid fa-phone-volume"></i> Contactar</a></li>
-          <li *ngIf="logied ? false:true " ><a routerLink="/login" class="nav-link {{this.rutas[0].login}}"><button type="button" class="btn btn btn-outline-light me-2" (click)="logging()">Login</button></a></li>
+          <li *ngIf="logied && user.img ? false:true " ><a routerLink="/login" class="nav-link {{this.rutas[0].login}}"><button type="button" class="btn btn btn-outline-light me-2" (click)="logging()">Login</button></a></li>
           <div *ngIf="!user.img ? user.img : 'false'" ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-outline-dark intento" id="dropdownBasic1" ngbDropdownToggle>
               <img class="img-cover" src="{{ user.img ? user.img : 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'}}" alt="yo" >
