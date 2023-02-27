@@ -10,8 +10,9 @@
         <input
           matInput
           class="form-control"
-          formControlName="position"
+          
           placeholder="N° 1..."
+          value={{position}}
         />
       </mat-form-field>
 
@@ -22,6 +23,7 @@
           class="form-control"
           formControlName="nombre"
           placeholder="Nombre producto"
+          value={{nombre}}
         />
       </mat-form-field>
     </div>
@@ -34,6 +36,7 @@
           class="form-control"
           formControlName="categoria"
           placeholder="Nombre de Categoria"            
+          value={{categoria}}
         />
       </mat-form-field>
 
@@ -44,6 +47,7 @@
           class="form-control"
           formControlName="estado"
           placeholder="Active/Inactive"
+          value={{estado}}
         />
       </mat-form-field>
     </div>
@@ -53,7 +57,9 @@
       <textarea matInput
       class="form-control"
       formControlName="descripcion"
-      placeholder="Descripcion producto">
+      placeholder="Descripcion producto"
+      >
+      {{descripcion}}s
       </textarea>
     </mat-form-field>
 
@@ -62,7 +68,8 @@
       <textarea matInput
       class="form-control"
       formControlName="img"
-      placeholder="www.imagen.com/12354.png">
+      placeholder="www.imagen.com/12354.png"
+      value="{{img}}">
       </textarea>
     </mat-form-field>
 
@@ -73,7 +80,9 @@
         class="form-control"
         formControlName="precio"
         placeholder="$10"
+        value={{precio}}
       />
+      {{precio}}
     </mat-form-field>
 
     <button [disabled]="!usuarioNuevo.valid" type="button" class="btn btn-outline-success" (click)="onSubmit()">Guardar</button>

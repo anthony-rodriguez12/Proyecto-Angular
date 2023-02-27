@@ -92,7 +92,8 @@ export class AdminComponent {
   nav: any;
   nposition: any;
   
-  constructor(private router: Router, private dialog:MatDialog,private cookies:CookieService) { 
+  constructor(private router: Router, private dialog:MatDialog,private cookies:CookieService
+    ) { 
     this.nav = this.router.getCurrentNavigation();
     this.nuevoCliente = this.nav.extras.state;
     
@@ -155,7 +156,18 @@ export class AdminComponent {
     this.cookies.set("nposition", this.nposition)
     this.dialog.open(EditComponent, {
       width: '70%',
+      data: {
+        position: element.position,
+        img: element.img,
+        nombre: element.nombre,
+        descripcion: element.descripcion,
+        categoria:element.categoria ,
+        estado: element.estado ,
+        precio: element.precio,
+        modificar: "",
+      },
     })
+    console.log("estructura", element)
   }
 
   openDialogAgregar(){

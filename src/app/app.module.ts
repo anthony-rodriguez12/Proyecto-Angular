@@ -20,7 +20,7 @@ import { MatInputModule} from '@angular/material/input'
 import { MatCardModule} from '@angular/material/card'
 
 import { MatIconModule} from '@angular/material/icon';
-import { MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import { MatTableModule} from '@angular/material/table';
 import { EditComponent } from './Form/edit/edit.component';
 import { NewComponent } from './Form/new/new.component';
@@ -55,7 +55,8 @@ import { ServiciosComponent } from './Pages/servicios/servicios.component';
     NgbCollapseModule
   ],
   entryComponents: [LoginComponent],
-  providers: [NgbCarouselConfig, CookieService],
+  providers: [NgbCarouselConfig, CookieService, 
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
