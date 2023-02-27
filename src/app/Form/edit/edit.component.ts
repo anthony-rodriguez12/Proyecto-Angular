@@ -40,12 +40,12 @@ export class EditComponent {
   }
 
   usuarioNuevo = new FormGroup({
-    nombre: new FormControl('',Validators.required),
-    img: new FormControl('',Validators.required),
-    descripcion: new FormControl('',Validators.required),
-    categoria: new FormControl('', Validators.required),
-    estado: new FormControl('', Validators.required),
-    precio: new FormControl('', Validators.required)
+    nombre: new FormControl(this.data?.nombre, Validators.required),
+    img: new FormControl(this.data?.img, Validators.required),
+    descripcion: new FormControl(this.data?.descripcion, Validators.required),
+    categoria: new FormControl(this.data?.categoria, Validators.required),
+    estado: new FormControl(this.data?.estado, Validators.required),
+    precio: new FormControl(this.data?.precio, Validators.required)
   })
   
   onSubmit()

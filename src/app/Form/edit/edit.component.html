@@ -5,25 +5,13 @@
   <br>
   <form [formGroup]="usuarioNuevo">
     <div class="row ">
-      <mat-form-field class="campos-field col-md-6">
-        <mat-label class="mb-2">Position</mat-label>
-        <input
-          matInput
-          class="form-control"
-          
-          placeholder="N° 1..."
-          value={{position}}
-        />
-      </mat-form-field>
-
-      <mat-form-field class="campos-field col-md-6">
+      <mat-form-field class="campos-field col-md-12">
         <mat-label class="mb-2">Nombre</mat-label>
         <input
           matInput
           class="form-control"
           formControlName="nombre"
           placeholder="Nombre producto"
-          value={{nombre}}
         />
       </mat-form-field>
     </div>
@@ -36,7 +24,6 @@
           class="form-control"
           formControlName="categoria"
           placeholder="Nombre de Categoria"            
-          value={{categoria}}
         />
       </mat-form-field>
 
@@ -47,7 +34,6 @@
           class="form-control"
           formControlName="estado"
           placeholder="Active/Inactive"
-          value={{estado}}
         />
       </mat-form-field>
     </div>
@@ -55,21 +41,20 @@
     <mat-form-field class="campos-field col-md-12">
       <mat-label class="mb-2 mt-3 bg-transparent text-body">Descripcion</mat-label>
       <textarea matInput
-      class="form-control"
-      formControlName="descripcion"
-      placeholder="Descripcion producto"
+        class="form-control"
+        formControlName="descripcion"
+        placeholder="Descripcion producto"
       >
-      {{descripcion}}s
       </textarea>
     </mat-form-field>
 
     <mat-form-field class="campos-field col-md-12">
       <mat-label class="mb-2 mt-3 bg-transparent text-body">Url Imagen</mat-label>
       <textarea matInput
-      class="form-control"
-      formControlName="img"
-      placeholder="www.imagen.com/12354.png"
-      value="{{img}}">
+        class="form-control"
+        formControlName="img"
+        placeholder="www.imagen.com/12354.png"
+      >
       </textarea>
     </mat-form-field>
 
@@ -80,9 +65,7 @@
         class="form-control"
         formControlName="precio"
         placeholder="$10"
-        value={{precio}}
       />
-      {{precio}}
     </mat-form-field>
 
     <button [disabled]="!usuarioNuevo.valid" type="button" class="btn btn-outline-success" (click)="onSubmit()">Guardar</button>
